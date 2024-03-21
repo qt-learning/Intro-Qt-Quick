@@ -149,7 +149,7 @@ Window {
         x: parent.width * 0.33 - width / 2
         y: 14
         sourceBaseName: "LED"
-        checked: footSwitch.checked
+        checked: footPedal.checked
 
         DeviceText {
             text: qsTr("CHECK")
@@ -178,7 +178,7 @@ Window {
 
     // Foot switch.
     DeviceSwitch {
-        id: footSwitch
+        id: footPedal
         sourceBaseName: "Button-Pedal"
         anchors.bottom: parent.bottom
         anchors.bottomMargin: 17
@@ -226,44 +226,29 @@ Window {
 
         DragHandler {
             target: null
-
             onCentroidChanged: updateValueAndRotation()
-
-            function toUserAngleDeg(logicAngleRad) {
-                // minus to turn clockwise, add 90 deg clockwise
-                return -logicAngleRad / Math.PI * 180 + 90;
-            }
 
             function updateValueAndRotation() {
                 if (centroid.pressedButtons !== Qt.LeftButton)
                     return
 
-                const yy = dial.height / 2.0 - centroid.position.y
-                const xx = centroid.position.x - dial.width / 2.0
-                let newAngle = (xx || yy) ? toUserAngleDeg(Math.atan2(yy, xx)) : 0
-
                 const startAngle = -140
                 const endAngle = 140
 
-                // Move around the circle to reach the interval.
-                if (newAngle < startAngle && newAngle + 360 < endAngle)
-                    newAngle += 360
-                else if (newAngle >= endAngle && newAngle - 360 >= startAngle)
-                    newAngle -= 360
+                const yy = dial.height / 2.0 - centroid.position.y
+                const xx = centroid.position.x - dial.width / 2.0
 
-                // We're not wrapping, so we want to stay as close as possible to the current angle.
-                // This is important to allow easy setting of boundary values (0,1)
-                if (Math.abs(angle - newAngle) > Math.abs(angle - (newAngle + 360)))
-                    newAngle += 360
-                if (Math.abs(angle - newAngle) > Math.abs(angle - (newAngle - 360)))
-                    newAngle -= 360
+                let radianAngle = Math.atan2(yy, xx)
+                let newAngle = (-radianAngle / Math.PI * 180) + 90
 
-                // dial.angle = newAngle
+                newAngle = ((newAngle - angle + 180) % 360 + 360) % 360 + angle - 180;
+
                 dial.angle = Math.max(startAngle, Math.min(newAngle, endAngle))
 
-                // The angle as a value that is between 0 and 1.
-                const normalisedValue = (dial.angle - startAngle) / (endAngle - startAngle)
-                dial.value = dial.minimumValue + (dial.maximumValue - dial.minimumValue) * normalisedValue
+                dial.value = dial.minimumValue + dial.range * normalisedValue
+                dial.value = (dial.angle - startAngle) / (endAngle - startAngle) * dial.range
+
+                console.log("angle:", dial.angle, "value:", dial.value)
             }
         }
     }

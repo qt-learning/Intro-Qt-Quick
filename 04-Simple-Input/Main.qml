@@ -149,7 +149,7 @@ Window {
         x: parent.width * 0.33 - width / 2
         y: 14
         sourceBaseName: "LED"
-        checked: footSwitch.checked
+        checked: footPedal.checked
 
         DeviceText {
             text: qsTr("CHECK")
@@ -178,7 +178,7 @@ Window {
 
     // Foot switch.
     DeviceSwitch {
-        id: footSwitch
+        id: footPedal
         sourceBaseName: "Button-Pedal"
         anchors.bottom: parent.bottom
         anchors.bottomMargin: 17
