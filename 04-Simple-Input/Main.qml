@@ -97,7 +97,6 @@ Window {
 
         // Brand Label
         InfoText {
-            id: brand
             text: qsTr("TIME BLENDER")
             anchors.top: parent.verticalCenter
             anchors.topMargin: 16

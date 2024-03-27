@@ -97,7 +97,6 @@ Window {
 
         // Brand Label
         InfoText {
-            id: brand
             text: qsTr("TIME BLENDER")
             anchors.top: parent.verticalCenter
             anchors.topMargin: 16
@@ -229,8 +228,9 @@ Window {
             onCentroidChanged: updateValueAndRotation()
 
             function updateValueAndRotation() {
-                if (centroid.pressedButtons !== Qt.LeftButton)
+                if (centroid.pressedButtons !== Qt.LeftButton) {
                     return
+                }
 
                 const startAngle = -140
                 const endAngle = 140
@@ -238,7 +238,7 @@ Window {
                 const yy = dial.height / 2.0 - centroid.position.y
                 const xx = centroid.position.x - dial.width / 2.0
 
-                let radianAngle = Math.atan2(yy, xx)
+                const radianAngle = Math.atan2(yy, xx)
                 let newAngle = (-radianAngle / Math.PI * 180) + 90
 
                 newAngle = ((newAngle - angle + 180) % 360 + 360) % 360 + angle - 180;
