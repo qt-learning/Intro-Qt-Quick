@@ -241,20 +241,18 @@ Window {
                 const radianAngle = Math.atan2(yy, xx)
                 let newAngle = (-radianAngle / Math.PI * 180) + 90
 
-                newAngle = ((newAngle - angle + 180) % 360 + 360) % 360 + angle - 180;
+                newAngle = ((newAngle - dial.angle + 180) % 360) + dial.angle - 180
 
                 dial.angle = Math.max(startAngle, Math.min(newAngle, endAngle))
-
-                dial.value = dial.minimumValue + dial.range * normalisedValue
                 dial.value = (dial.angle - startAngle) / (endAngle - startAngle) * dial.range
 
-                console.log("angle:", dial.angle, "value:", dial.value)
+                console.log("angle: ", dial.angle, "value: ", dial.value)
             }
         }
     }
 
     DeviceDial {
-        anchors.left: footSwitch.left
+        anchors.left: footPedal.left
         y: 147 - height / 2
         text: qsTr("TIME")
     }
@@ -266,7 +264,7 @@ Window {
     }
 
     DeviceDial {
-        anchors.right: footSwitch.right
+        anchors.right: footPedal.right
         y: 147 - height / 2
         text: qsTr("FEEDBACK")
     }
