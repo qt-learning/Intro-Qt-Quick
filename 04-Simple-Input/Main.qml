@@ -128,10 +128,10 @@ Window {
     }
 
     component SwitchImage: Image {
-        source: `assets/${sourceBaseName}${checked ? "-Checked" : ""}.png`
-
         required property string sourceBaseName
         property bool checked
+
+        source: `assets/${sourceBaseName}${checked ? "-Checked" : ""}.png`
     }
 
     component DeviceSwitch: SwitchImage {
