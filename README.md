@@ -2,6 +2,10 @@
 
 This is the repo for the introduction to Qt Quick course on Qt Academy.
 
+> Get the full learning experience by enrolling in the course on [Qt Academy](https://www.qt.io/academy/course-catalog?q=qt+quick#introduction-to-qt-quick)
+
+> You can also find the course playlist on the [Qt YouTube channel](https://www.youtube.com/playlist?list=PLizsthdRd0YwCC7xfHQxz1_wv0n-Ds2s2)
+
 ## Getting Started
 
 - In this repo, you will find the guitar pedal project we are building throughout the course in different stages of completion.
@@ -19,7 +23,7 @@ To run a version of the project from a specific section, navigate to the desired
 
 Please note that in order to run the each section, you will need to copy the resources from the `00-Assets` folder into the section you wish to run. The assets are not included in the section folders to keep the repo size small.
 
-## Resouces
+## Resources
 
 If you need additional help, the following resources may be helpful:
 
