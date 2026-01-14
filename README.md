@@ -6,6 +6,18 @@ This is the repo for the introduction to Qt Quick course on Qt Academy.
 
 > You can also find the course playlist on the [Qt YouTube channel](https://www.youtube.com/playlist?list=PLizsthdRd0YwCC7xfHQxz1_wv0n-Ds2s2)
 
+## 🎯 What You'll Learn 
+
+- **Creating a Qt Quick application** in Qt Creator from scratch
+
+- **Importing and integrating assets** into your project
+
+- **Applying key Qt Quick concepts:** anchors, reusable components, mouse and touch inputs, signal and slots, property bindings
+
+⭐ Skill Level: Beginner
+
+⏱️ Time to Complete: 60 minutes 
+
 ## Getting Started
 
 - In this repo, you will find the guitar pedal project we are building throughout the course in different stages of completion.
