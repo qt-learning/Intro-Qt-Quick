@@ -4,7 +4,7 @@ This is the repo for the introduction to Qt Quick course on Qt Academy.
 
 > Get the full learning experience by enrolling in the course on [Qt Academy](https://www.qt.io/academy/course-catalog?q=qt+quick#introduction-to-qt-quick)
 
-> You can also find the course playlist on the [Qt YouTube channel](https://www.youtube.com/playlist?list=PLizsthdRd0YwCC7xfHQxz1_wv0n-Ds2s2)
+> You can also find the course playlist on the [Qt YouTube channel](https://youtube.com/playlist?list=PLizsthdRd0Yw40RQgF4dNiOEb-KbFCTOw&si=pFETGOob0ks2H7k2)
 
 ## 🎯 What You'll Learn 
 
