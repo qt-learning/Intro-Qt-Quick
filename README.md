@@ -62,9 +62,9 @@ This software package may provide links or access to third party libraries or co
 
 #### Fonts
 
-- The [Prisma](#00-Assets/fonts/Prisma.ttf) font was created by [Dieter Steffman](http://www.steffmann.de/) and originally designed by Rudolf Koch for the type foundry Klingspor Brothers (Offenbach/M.), 1932. It was downloaded from [DaFont](https://www.dafont.com/prisma.font) and is licensed under attribution to the original creator, Dieter Steffman.
+- The [Prisma](/00-Assets/fonts/Prisma.ttf) font was created by [Dieter Steffman](http://www.steffmann.de/) and originally designed by Rudolf Koch for the type foundry Klingspor Brothers (Offenbach/M.), 1932. It was downloaded from [DaFont](https://www.dafont.com/prisma.font) and is licensed under attribution to the original creator, Dieter Steffman.
 
-- The [RussoOne](#00-Assets/fonts/RussoOne-Regular.ttf) font was created by [Ivan Gladkikh](https://typetype.org/) and is licensed under the [SIL Open Font License](#LICENSES/OFL.txt).
+- The [RussoOne](/00-Assets/fonts/RussoOne-Regular.ttf) font was created by [Ivan Gladkikh](https://typetype.org/) and is licensed under the [SIL Open Font License](/LICENSES/OFL.txt).
 
 #### Images
 
